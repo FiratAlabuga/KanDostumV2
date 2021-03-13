@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "389643502199",
+    "firebase_url": "https://kandostum2-default-rtdb.firebaseio.com",
+    "project_id": "kandostum2",
+    "storage_bucket": "kandostum2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389643502199:android:2babfd251c7232fcb33c72",
+        "android_client_info": {
+          "package_name": "com.example.kandostum2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389643502199-627qepv7qpk3df5jhsn1thh7uo4mvh95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdb9VNbrdySmzaxo5igAibD0vp3L2bdEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389643502199-627qepv7qpk3df5jhsn1thh7uo4mvh95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389643502199:android:2d0e752fbeae72fbb33c72",
+        "android_client_info": {
+          "package_name": "com.kleberandrade.myblood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389643502199-627qepv7qpk3df5jhsn1thh7uo4mvh95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdb9VNbrdySmzaxo5igAibD0vp3L2bdEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389643502199-627qepv7qpk3df5jhsn1thh7uo4mvh95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

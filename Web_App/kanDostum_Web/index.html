@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kan Dostum-Beta!</title>
+        <link rel="stylesheet" href="/features/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/features/kndstm_bckg.png" alt="KanDostum">
+            <h2>Kan Dostum Web Uygulamasına Hoşgeldiniz!</h2>
+            <p>Kan Dostum uygulamasını kullanan ile tüm donörlere ulaşabilirsiniz.</p>
+            <p>Her gün 38.000'den fazla bağışa ihtiyaç var.</p>
+            <p>Kan bağışı yapmak sağlığınız açısından da önem arz etmektedir.</p>
+            <a style="text-decoration: none" href="/features/knuygunluk_index.html"><p>Kime Kan Verebilirim ? Öğrenmek için tıkla.</p></a>
+            <button>Bağış/Talep</button>
+        </header>
+        
+        <section class="form hide">
+            <h2>Bağışçı olarak katkıda bulunun veya Talep edin</h2>
+            <form action="/" method="POST">
+                <input type="text" name="adsoyad" placeholder="Adınız ve Soyadınız">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="telNu" placeholder="Telefon Numarası">
+                <input type="text" name="kanG" placeholder="Kan Grubunuz">
+                <input type="text" name="varsaMesaj" placeholder="Varsa Mesajınız">
+                <button>Bağışta bulun veya Talep et</button>
+            </form>
+        </section>
+
+        <main>
+       <h2>Kan Dostum <a style="text-decoration: none" href=" "><span>Uygulamayı İndir</span></a></h2>
+       <p>Uygulamayı indirin tüm <span>kan,plazma ve trombosit</span> bağışlarını görüntüleyin , talep edin veya bağışlayın.</p>
+          <!--        <section class="donors">
+
+                {%for donor in donors%}
+
+                    <div class="donor">
+                        <div class="blood">{{donor.blood}}</div>
+                        <p>{{donor.name}}</p>
+                    </div>
+
+                {%endfor%}
+
+            </section> -->
+        </main>
+        <footer> Kan Hayattır. Kan Dostumla Vardır.</footer>  
+
+    <script src="/features/script.js"></script>
+    </body>
+</html>
