@@ -49,7 +49,7 @@ class _ForgetPageState extends State<ForgetPage> {
     Navigator.pop(context);
 
     SnackBarHelper.showSuccessMessage(context,
-        title: 'Başarılı',
+        title: 'Success',
         message:
             'Yenileme Linki Gönderilen Mail Adresi:  ${_controller.userEmail}');
   }
