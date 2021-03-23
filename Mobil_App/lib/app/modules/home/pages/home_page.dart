@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
       },
       items: <BottomNavyBarItem>[
         BottomNavyBarItem(
-          title: Text('Donör'),
+          title: Text('Donors'),
           icon: Icon(Icons.person),
           activeColor: Theme.of(context).accentColor,
           inactiveColor: Colors.grey,
