@@ -62,25 +62,25 @@ class _HomePageState extends State<HomePage> {
       },
       items: <BottomNavyBarItem>[
         BottomNavyBarItem(
-          title: Text('Donör'),
+          title: Text('Donor'),
           icon: Icon(Icons.person),
           activeColor: Theme.of(context).accentColor,
           inactiveColor: Colors.grey,
         ),
         BottomNavyBarItem(
-          title: Text('İstekler'),
+          title: Text('Requests'),
           icon: Icon(Icons.apps),
           activeColor: Theme.of(context).accentColor,
           inactiveColor: Colors.grey,
         ),
         BottomNavyBarItem(
-          title: Text('Konumlar'),
+          title: Text('Locations'),
           icon: Icon(Icons.local_hospital),
           activeColor: Theme.of(context).accentColor,
           inactiveColor: Colors.grey,
         ),
         BottomNavyBarItem(
-          title: Text('SSS'),
+          title: Text('FAQ'),
           icon: Icon(Icons.question_answer),
           activeColor: Theme.of(context).accentColor,
           inactiveColor: Colors.grey,
