@@ -10,7 +10,7 @@ class _ProfileHistoricPageState extends State<ProfileHistoricPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bağış Geçmişi'),
+        title: Text('Donation History'),
       ),
       body: Container(),
     );
