@@ -30,8 +30,8 @@ class _ProfileSettingsPageState extends State<ProfileSettingsPage> {
               MaterialPageRoute(builder: (context) => SignInPage()),
             );
           }),
-          title: 'Çıkış Yap',
-          msg: 'Uygulamadan Çık',
+          title: 'Sign Out',
+          msg: 'Quit Application',
         );
       },
     );
@@ -41,17 +41,17 @@ class _ProfileSettingsPageState extends State<ProfileSettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ayarlar'),
+        title: Text('Settings'),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        label: Text('Çıkış Yap'),
+        label: Text('Sign Out'),
         icon: Icon(Icons.exit_to_app),
         onPressed: _logOut,
       ),
       body: ListView(
         children: <Widget>[
           SwitchListTile(
-            title: Text('Karanlık Mod'),
+            title: Text('Dark Mode'),
             value: Theme.of(context).brightness == Brightness.dark,
             activeColor: Theme.of(context).accentColor,
             onChanged: (value) {
@@ -59,7 +59,7 @@ class _ProfileSettingsPageState extends State<ProfileSettingsPage> {
             },
           ),
           SwitchListTile(
-            title: Text('Yalnızca kan grubumla ilgili bildirimler alınsın mı?'),
+            title: Text('Get notifications only about my blood type?'),
             value: false,
             activeColor: Theme.of(context).accentColor,
             onChanged: (value) {},
