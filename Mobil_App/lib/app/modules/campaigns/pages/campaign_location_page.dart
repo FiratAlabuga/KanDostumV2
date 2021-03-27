@@ -59,7 +59,7 @@ class _CampaignLocationPageState extends State<CampaignLocationPage> {
                   onShare: () {
                     CampaignBottomSheet.show(
                       context,
-                      '${campaign.name} tipte kan bağışına ihtiyaç var ${campaign.bloodType}\n\nBağış yapabilecekler için bilgiler:\n${campaign.location}',
+                      '${campaign.name} type of blood donation needed ${campaign.bloodType}\n\nInformation for donors:\n${campaign.location}',
                       /* _controller.campaigns[index].photoPath  ?? '', */
                     );
                   },
@@ -88,8 +88,8 @@ class _CampaignLocationPageState extends State<CampaignLocationPage> {
     _profileController.save();
     SnackBarHelper.showSuccessMessage(
       context,
-      title: 'Teşekkürler',
-      message: 'Kan bağışı başarıyla kaydedildi.',
+      title: 'Thank you',
+      message: 'Blood donation was successfully registered.',
     );
   }
 }
