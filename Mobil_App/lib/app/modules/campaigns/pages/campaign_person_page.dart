@@ -59,7 +59,7 @@ class _CampaignPersonPageState extends State<CampaignPersonPage> {
                   onShare: () {
                     CampaignBottomSheet.show(
                       context,
-                      '${campaign.name} tipte bir kan bağışına ihtiyacım var ${campaign.bloodType}\n\nBağış yapabilecekler için bilgiler:\n${campaign.location}',
+                      '${campaign.name} type blood donation which I needed ${campaign.bloodType}\n\nInformation for donors:\n${campaign.location}',
                      /*  _campaignController.campaigns[index].photoPath ?? '', */
                     );
                   },
@@ -88,8 +88,8 @@ class _CampaignPersonPageState extends State<CampaignPersonPage> {
     _profileController.save();
     SnackBarHelper.showSuccessMessage(
       context,
-      title: 'Teşekkürler',
-      message: 'Kan bağışı başarıyla kaydedildi.',
+      title: 'Thank you',
+      message: 'Blood donation was successfully registered.',
     );
   }
 }
