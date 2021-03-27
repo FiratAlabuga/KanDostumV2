@@ -49,13 +49,13 @@ class _ForgetPageState extends State<ForgetPage> {
     Navigator.pop(context);
 
     SnackBarHelper.showSuccessMessage(context,
-        title: 'Başarılı',
+        title: 'Success',
         message:
-            'Yenileme Linki Gönderilen Mail Adresi:  ${_controller.userEmail}');
+            'E-Mail Address For Which Renewal Link Has Been Sent:  ${_controller.userEmail}');
   }
 
   onError(error) {
-    SnackBarHelper.showFailureMessage(context, title: 'Hata', message: error);
+    SnackBarHelper.showFailureMessage(context, title: 'Error', message: error);
   }
 
   @override
@@ -86,7 +86,7 @@ class _ForgetPageState extends State<ForgetPage> {
                 ),
                 Expanded(child: SizedBox()),
                 Text(
-                  'Parolanızı mı unuttunuz?',
+                  'Forgot password?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 24.0,
@@ -95,7 +95,7 @@ class _ForgetPageState extends State<ForgetPage> {
                 ),
                 SizedBox(height: 10.0),
                 Text(
-                  'Lütfen hesabınızla ilişkili E-posta adresini bildirin ve size parolanızı sıfırlama talimatlarını içeren bir bağlantı göndereceğiz.',
+                  'Please provide the Email address associated with your account and we will send you a link with instructions to reset your password.',
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 40),
@@ -111,7 +111,7 @@ class _ForgetPageState extends State<ForgetPage> {
                 SizedBox(height: 20),
                 Observer(builder: (_) {
                   return SubmitButton(
-                    label: 'Gönder',
+                    label: 'Send',
                     busy: _controller.busy,
                     firstColor: Theme.of(context).accentColor,
                     secondColor: Theme.of(context).primaryColor,
@@ -121,8 +121,8 @@ class _ForgetPageState extends State<ForgetPage> {
                 SizedBox(height: 20),
                 Expanded(child: SizedBox()),
                 MetinButton(
-                  question: 'Hesabın yok mu?',
-                  label: 'Kayıt Ol',
+                  question: 'Dont have an account?',
+                  label: 'Register',
                   onTap: navigatorToRegisterPage,
                 ), 
               ],
