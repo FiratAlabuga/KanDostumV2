@@ -46,7 +46,7 @@ class _SignInPageState extends State<SignInPage> {
   }
 
   onError(error) {
-    SnackBarHelper.showFailureMessage(context, title: 'Hata', message: error);
+    SnackBarHelper.showFailureMessage(context, title: 'Error', message: error);
   }
 
   navigatorToRegisterPage() {
@@ -119,8 +119,8 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Expanded(child: SizedBox()),
                 MetinButton(
-                  question: 'Hesabın yok mu?',
-                  label: 'Kayıt Ol',
+                  question: 'Do not you have an account?',
+                  label: 'Register',
                   onTap: navigatorToRegisterPage,
                 ),
               ],
