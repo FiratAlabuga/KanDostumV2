@@ -14,7 +14,7 @@ class _CampaignPageState extends State<CampaignPage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Kan İstekleri'),
+          title: Text('Blood Requests'),
           elevation: 0,
           bottom: TabBar(
             labelColor: Colors.redAccent,
@@ -31,13 +31,13 @@ class _CampaignPageState extends State<CampaignPage> {
               Tab(
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text("BİREYSEL/TOPLULUK"),
+                  child: Text("INDIVIDUAL/COMMUNITY"),
                 ),
               ),
               Tab(
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text("KAN MERKEZLERİ"),
+                  child: Text("BLOOD CENTERS"),
                 ),
               ),
             ],
