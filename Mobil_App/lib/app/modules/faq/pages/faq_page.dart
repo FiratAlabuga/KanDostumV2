@@ -27,7 +27,7 @@ class _FaqPageState extends State<FaqPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        title: Text('Sıkça Sorulan Sorular'),
+        title: Text('Frequently Asked Questions'),
           actions: <Widget>[
           IconButton(
             onPressed: (){
@@ -66,7 +66,7 @@ class _FaqPageState extends State<FaqPage> {
       MaterialPageRoute(builder: (context) => FirstScreen()),
     );
       },
-      label: Text('Konuşmayı Başlat'),
+      label: Text('Start Conversation'),
       icon: Icon(Icons.thumb_up),
       backgroundColor: Colors.redAccent[300],
     ),
