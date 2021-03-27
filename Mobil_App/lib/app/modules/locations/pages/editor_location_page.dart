@@ -77,7 +77,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
     } else {
       SnackBarHelper.showFailureMessage(
         context,
-        title: 'Hata',
+        title: 'Error',
         message: infoCepJSON.searchCepError.errorMessage ?? '',
       );
     }
@@ -90,8 +90,8 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
             return BackDialog(
               onConfirm: () => Navigator.of(context).pop(false),
               onCancel: () => Navigator.of(context).pop(true),
-              title: 'Konumlar',
-              msg: 'Yerlerin Kaydı',
+              title: 'Locations',
+              msg: 'Registration of Places',
             );
           },
         ) ??
@@ -104,7 +104,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
         onWillPop: _requestPop,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Bağış Yeri Bildir'),
+            title: Text('Report Donation Place'),
           ),
           body: SingleChildScrollView(
             padding: EdgeInsets.all(10.0),
@@ -116,20 +116,20 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _nameController,
-                      label: 'Bağış Yeri Adı',
+                      label: 'Donation Place Name',
                       onSaved: (value) {
                         _controller.location.name = value;
                       },
                       validator: Validator.isNotEmptyText,
                     );
                   }),
-                  ListTileHeader('İletişim', leftPadding: 0.0),
+                  ListTileHeader('Contact', leftPadding: 0.0),
                   Observer(builder: (_) {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _phoneController,
                       textInputType: TextInputType.number,
-                      label: 'Telefon Numarası',
+                      label: 'Phone number',
                       onSaved: (value) {
                         _controller.location.phone = value;
                       },
@@ -145,13 +145,13 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                       },
                     );
                   }),
-                  ListTileHeader('Konum/Bölge', leftPadding: 0.0),
+                  ListTileHeader('Location/Region', leftPadding: 0.0),
                   Observer(builder: (_) {
                     return ButtonInputField(
                       busy: _controller.busy,
                       controller: _cepController,
                       textInputType: TextInputType.number,
-                      label: 'Posta Kodu',
+                      label: 'Postcode',
                       onSaved: (value) {
                         _controller.location.cep = value;
                       },
@@ -162,7 +162,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _addressController,
-                      label: 'Adres',
+                      label: 'Address',
                       onSaved: (value) {
                         _controller.location.address = value;
                       },
@@ -173,7 +173,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _numberController,
-                      label: 'Numara',
+                      label: 'Number',
                       onSaved: (value) {
                         _controller.location.number = value;
                       },
@@ -184,7 +184,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _complementoController,
-                      label: 'Cadde/Sokak',
+                      label: 'Avenue / Street',
                       onSaved: (value) {
                         _controller.location.complemento = value;
                       },
@@ -195,7 +195,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _neighborhoodController,
-                      label: 'İlçe',
+                      label: 'District',
                       onSaved: (value) {
                         _controller.location.neighborhood = value;
                       },
@@ -206,7 +206,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _cityController,
-                      label: 'İl',
+                      label: 'Province',
                       onSaved: (value) {
                         _controller.location.city = value;
                       },
@@ -217,7 +217,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                     return CustomInputField(
                       busy: _controller.busy,
                       controller: _stateController,
-                      label: 'Bölge',
+                      label: 'Region',
                       onSaved: (value) {
                         _controller.location.state = value;
                       },
@@ -228,7 +228,7 @@ class _EditorLocationsPageState extends State<EditorLocationsPage> {
                   Observer(
                     builder: (_) {
                       return SubmitButton(
-                        label: 'Kaydet ve İlet',
+                        label: 'Save and Forward',
                         busy: _controller.busy,
                         firstColor: Theme.of(context).accentColor,
                         secondColor: Theme.of(context).primaryColor,
