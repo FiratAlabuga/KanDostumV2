@@ -32,7 +32,7 @@ class _LocationPageState extends State<LocationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bağış Yerleri'),
+        title: Text('Donation Places'),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
