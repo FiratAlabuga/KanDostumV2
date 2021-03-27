@@ -93,7 +93,7 @@ class _ProfilePageState extends State<ProfilePage> {
     } else {
       SnackBarHelper.showFailureMessage(
         context,
-        title: 'Hata',
+        title: 'Error',
         message: infoCepJSON.searchCepError.errorMessage ?? '',
       );
     }
@@ -107,8 +107,8 @@ class _ProfilePageState extends State<ProfilePage> {
         onSuccess: (pictureUrl) {
           SnackBarHelper.showSuccessMessage(
             context,
-            title: 'Başarılı',
-            message: 'Resim yükleme tamamlandı.',
+            title: 'Success',
+            message: 'Image upload is complete.',
           );
 
           _controller.setPicture(pictureUrl);
@@ -129,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
             children: <Widget>[
               new ListTile(
                 leading: new Icon(Icons.camera_alt),
-                title: new Text('Kamera'),
+                title: new Text('Camera'),
                 onTap: () {
                   Navigator.pop(context);
                   _changeImage(true);
@@ -137,7 +137,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               new ListTile(
                 leading: new Icon(Icons.image),
-                title: new Text('Galeri'),
+                title: new Text('Gallery'),
                 onTap: () {
                   Navigator.pop(context);
                   _changeImage(false);
@@ -167,7 +167,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Icon(Icons.settings, color: Colors.white),
                 foregroundColor: Theme.of(context).canvasColor,
                 backgroundColor: Theme.of(context).accentColor,
-                label: 'Ayarlar',
+                label: 'Settings',
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -181,7 +181,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Icon(Icons.history, color: Colors.white),
                 foregroundColor: Theme.of(context).canvasColor,
                 backgroundColor: Theme.of(context).accentColor,
-                label: 'Geçmiş',
+                label: 'History',
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -195,7 +195,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Icon(Icons.edit, color: Colors.white),
                 foregroundColor: Theme.of(context).canvasColor,
                 backgroundColor: Theme.of(context).accentColor,
-                label: 'Düzenle',
+                label: 'Edit',
                 onPressed: () {
                   _controller.editable = true;
                 },
@@ -215,7 +215,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Donör profili'),
+        title: Text('Donor Profile'),
         elevation: 0,
       ),
       floatingActionButton: _buildFloatingActionButton(),
@@ -244,7 +244,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   return BloodTypeInputField(
                     busy: !_controller.editable,
                     controller: _bloodTypeController,
-                    label: 'Kan grubu',
+                    label: 'Blood Group',
                     onSaved: (value) {
                       _controller.user.bloodType = value;
                     },
@@ -258,7 +258,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _birthDateController,
                     textInputType: TextInputType.datetime,
-                    label: 'Doğum Tarihi',
+                    label: 'Date of Birth',
                     onSaved: (value) {
                       _controller.user.birthDate = value;
                     },
@@ -271,7 +271,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   return GenderInputField(
                     busy: !_controller.editable,
                     controller: _genderController,
-                    label: 'Cinsiyet',
+                    label: 'Gender',
                     onSaved: (value) {
                       _controller.user.gender = value;
                     },
@@ -285,21 +285,21 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _phoneController,
                     textInputType: TextInputType.phone,
-                    label: 'Telefon Numarası',
+                    label: 'Phone Number',
                     onSaved: (value) {
                       _controller.user.phone = value;
                     },
                   );
                 }),
               ),
-              ListTileHeader('Adres Bilgileri'),
+              ListTileHeader('Address Info'),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Observer(builder: (_) {
                   return ButtonInputField(
                     busy: !_controller.editable,
                     controller: _cepController,
-                    label: 'Posta Kodu',
+                    label: 'Postcode',
                     textInputType: TextInputType.number,
                     onSaved: (value) {
                       _controller.user.cep = value;
@@ -315,7 +315,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _addressController,
                     textInputType: TextInputType.text,
-                    label: 'Adres',
+                    label: 'Address',
                     onSaved: (value) {
                       _controller.user.address = value;
                     },
@@ -329,7 +329,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _numberController,
                     textInputType: TextInputType.number,
-                    label: 'Numara',
+                    label: 'Number',
                     onSaved: (value) {
                       _controller.user.number = value;
                     },
@@ -343,7 +343,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _complementoController,
                     textInputType: TextInputType.text,
-                    label: 'Cadde/Sokak',
+                    label: 'Avenue / Street',
                     onSaved: (value) {
                       _controller.user.complemento = value;
                     },
@@ -357,7 +357,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _neighborhoodController,
                     textInputType: TextInputType.text,
-                    label: 'İlçe',
+                    label: 'District',
                     onSaved: (value) {
                       _controller.user.neighborhood = value;
                     },
@@ -371,7 +371,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     busy: !_controller.editable,
                     controller: _stateController,
                     textInputType: TextInputType.text,
-                    label: 'Bölge',
+                    label: 'Region',
                     onSaved: (value) {
                       _controller.user.state = value;
                     },
@@ -384,7 +384,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   return CustomInputField(
                     busy: !_controller.editable,
                     controller: _cityController,
-                    label: 'İl',
+                    label: 'Province',
                     textInputType: TextInputType.text,
                     onSaved: (value) {
                       _controller.user.city = value;
