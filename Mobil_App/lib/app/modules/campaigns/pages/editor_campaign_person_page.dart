@@ -50,7 +50,7 @@ class _EditorCampaignPersonPageState extends State<EditorCampaignPersonPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bağış İsteği'),
+        title: Text('Donation Request'),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(10.0),
@@ -66,11 +66,11 @@ class _EditorCampaignPersonPageState extends State<EditorCampaignPersonPage> {
                   },
                 );
               }),
-              ListTileHeader('Hasta Bilgileri', leftPadding: 0.0),
+              ListTileHeader('Patient Information', leftPadding: 0.0),
               Observer(builder: (_) {
                 return CustomInputField(
                   busy: _controller.busy,
-                  label: 'Hasta Adı',
+                  label: 'Patient Name',
                   onSaved: (value) {
                     _controller.campaign.name = value;
                   },
@@ -81,18 +81,18 @@ class _EditorCampaignPersonPageState extends State<EditorCampaignPersonPage> {
                 return BloodTypeInputField(
                   busy: _controller.busy,
                   controller: _bloodTypeController,
-                  label: 'Kan grubu',
+                  label: 'Blood group',
                   onSaved: (value) {
                     _controller.campaign.bloodType = value;
                   },
                 );
               }),
-              ListTileHeader('Kampanya verileri', leftPadding: 0.0),
+              ListTileHeader('Campaign Data', leftPadding: 0.0),
               Observer(builder: (_) {
                 return DateInputField(
                   busy: _controller.busy,
                   controller: _endDateController,
-                  label: 'Talebin bitiş tarihi',
+                  label: 'Deadline for the request',
                   onSaved: (value) {
                     _controller.campaign.endDate = value;
                   },
@@ -102,7 +102,7 @@ class _EditorCampaignPersonPageState extends State<EditorCampaignPersonPage> {
               Observer(builder: (_) {
                 return CustomInputField(
                   busy: _controller.busy,
-                  label: 'Konaklama yeri',
+                  label: 'Accommodation place',
                   onSaved: (value) {
                     _controller.campaign.hospitalization = value;
                   },
@@ -112,7 +112,7 @@ class _EditorCampaignPersonPageState extends State<EditorCampaignPersonPage> {
               Observer(builder: (_) {
                 return CustomInputField(
                   busy: _controller.busy,
-                  label: 'Bağış sitesi',
+                  label: 'Donation site',
                   onSaved: (value) {
                     _controller.campaign.location = value;
                   },
@@ -123,7 +123,7 @@ class _EditorCampaignPersonPageState extends State<EditorCampaignPersonPage> {
               Observer(
                 builder: (_) {
                   return SubmitButton(
-                    label: 'Kaydet ve İlet',
+                    label: 'Save and Forward',
                     busy: _controller.busy,
                     firstColor: Theme.of(context).accentColor,
                     secondColor: Theme.of(context).primaryColor,
