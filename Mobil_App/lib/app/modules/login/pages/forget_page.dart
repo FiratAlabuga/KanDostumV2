@@ -121,7 +121,7 @@ class _ForgetPageState extends State<ForgetPage> {
                 SizedBox(height: 20),
                 Expanded(child: SizedBox()),
                 MetinButton(
-                  question: 'Dont have an account?',
+                  question: 'Do not have an account?',
                   label: 'Register',
                   onTap: navigatorToRegisterPage,
                 ), 
