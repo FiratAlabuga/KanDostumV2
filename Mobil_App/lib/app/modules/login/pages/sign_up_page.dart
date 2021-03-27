@@ -47,14 +47,14 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   onSignUpError(error) {
-    SnackBarHelper.showFailureMessage(context, title: 'Hata', message: error);
+    SnackBarHelper.showFailureMessage(context, title: 'Error', message: error);
   }
 
   onSignUpSuccess() {
     SnackBarHelper.showSuccessMessage(
       context,
-      title: 'Başarılı',
-      message: 'Kaydınız Başarıyla Gerçekleştirildi.',
+      title: 'Success',
+      message: 'Your Registration Has Been Successfully Completed.',
     );
 
     _controller.signInWithCredentials(
@@ -96,7 +96,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 Expanded(child: SizedBox()),
                 Observer(builder: (_) {
                   return CustomInputField(
-                    label: 'Kullanıcı Adı',
+                    label: 'User Name',
                     busy: _controller.busy,
                     textInputType: TextInputType.text,
                     validator: Validator.isValidateName,
@@ -126,7 +126,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 SizedBox(height: 20),
                 Observer(builder: (_) {
                   return SubmitButton(
-                    label: 'Kayıt Ol',
+                    label: 'Register',
                     busy: _controller.busy,
                     firstColor: Theme.of(context).accentColor,
                     secondColor: Theme.of(context).primaryColor,
@@ -135,8 +135,8 @@ class _SignUpPageState extends State<SignUpPage> {
                 }),
                 Expanded(child: SizedBox()),
                      MetinButton(
-                  question: 'Hesabın Var Mı ?',
-                  label: 'Giriş Yap',
+                  question: 'Do you have an account?',
+                  label: 'Login',
                   onTap: navigatorToLoginPage,
                 ),
               ],
