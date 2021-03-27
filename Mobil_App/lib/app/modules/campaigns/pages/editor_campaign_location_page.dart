@@ -53,7 +53,7 @@ class _EditorCampaignLocationPageState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Yeni Kan Kampanyası'),
+        title: Text('New Blood Campaign'),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(10.0),
@@ -69,11 +69,11 @@ class _EditorCampaignLocationPageState
                   },
                 );
               }),
-              ListTileHeader('Kampanya İçin Detaylar', leftPadding: 0.0),
+              ListTileHeader('Details for the Campaign', leftPadding: 0.0),
               Observer(builder: (_) {
                 return CustomInputField(
                   busy: _controller.busy,
-                  label: 'Kampanya Adı',
+                  label: 'Campaign Name',
                   onSaved: (value) {
                     _controller.campaign.name = value;
                   },
@@ -83,7 +83,7 @@ class _EditorCampaignLocationPageState
               Observer(builder: (_) {
                 return CustomInputField(
                   busy: _controller.busy,
-                  label: 'Açıklama',
+                  label: 'Explanation',
                   onSaved: (value) {
                     _controller.campaign.description = value;
                   },
@@ -94,7 +94,7 @@ class _EditorCampaignLocationPageState
                 return BloodTypeInputField(
                   busy: _controller.busy,
                   controller: _bloodTypeController,
-                  label: 'Kan grubu',
+                  label: 'Blood group',
                   onSaved: (value) {
                     _controller.campaign.bloodType = value;
                   },
@@ -103,20 +103,20 @@ class _EditorCampaignLocationPageState
               Observer(builder: (_) {
                 return CustomInputField(
                   busy: _controller.busy,
-                  label: 'Bağış sitesi',
+                  label: 'Donation Site',
                   onSaved: (value) {
                     _controller.campaign.location = value;
                   },
                   validator: Validator.isNotEmptyText,
                 );
               }),
-              ListTileHeader('Son teslim tarihi', leftPadding: 0.0),
+              ListTileHeader('Deadline', leftPadding: 0.0),
               Observer(builder: (_) {
                 return DateInputField(
                   busy: _controller.busy,
                   controller: _startDateController,
                   textInputType: TextInputType.datetime,
-                  label: 'Başlangıç ​​tarihi',
+                  label: 'Starting ​​date',
                   onSaved: (value) {
                     _controller.campaign.startDate = value;
                   },
@@ -127,7 +127,7 @@ class _EditorCampaignLocationPageState
                   busy: _controller.busy,
                   controller: _endDateController,
                   textInputType: TextInputType.datetime,
-                  label: 'Bitiş tarihi',
+                  label: 'End date',
                   onSaved: (value) {
                     _controller.campaign.endDate = value;
                   },
@@ -137,7 +137,7 @@ class _EditorCampaignLocationPageState
               Observer(
                 builder: (_) {
                   return SubmitButton(
-                    label: 'Kaydet ve İlet',
+                    label: 'Save and Forward',
                     busy: _controller.busy,
                     firstColor: Theme.of(context).accentColor,
                     secondColor: Theme.of(context).primaryColor,
