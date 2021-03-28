@@ -244,7 +244,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   return BloodTypeInputField(
                     busy: !_controller.editable,
                     controller: _bloodTypeController,
-                    label: 'Blood Group',
+                    label: 'Blood Type',
                     onSaved: (value) {
                       _controller.user.bloodType = value;
                     },
