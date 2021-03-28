@@ -14,14 +14,14 @@ const firebase = require("firebase");
 require("firebase/firestore");
 
 firebase.initializeApp({
-    apiKey: "AIzaSyBqwZNIwQLs-EDJP-GJpUBigRQGNkWGYHE",
-    authDomain: "kandostum2.firebaseapp.com",
-    databaseURL: "https://kandostum2-default-rtdb.firebaseio.com",
-    projectId: "kandostum2",
-    storageBucket: "kandostum2.appspot.com",
-    messagingSenderId: "389643502199",
-    appId: "1:389643502199:web:c0f05436250c0f93b33c72",
-    measurementId: "G-YNTR4Z1P7E"
+    apiKey: " ",
+    authDomain: " ",
+    databaseURL: " ",
+    projectId: " ",
+    storageBucket: " ",
+    messagingSenderId: " ",
+    appId: " ",
+    measurementId: " "
   });
   
 var db = firebase.firestore();
