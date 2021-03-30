@@ -39,7 +39,7 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
          appBar: AppBar(
-          title: Text("Kan Dostum Canlı Akış"),
+          title: Text("Kan Dostum Stream Feed"),
            centerTitle: true,
            backgroundColor: Colors.grey[850],
            automaticallyImplyLeading: true,
@@ -86,7 +86,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           ),
                           title: TextFormField(
                             decoration: InputDecoration(
-                              hintText: "Konu",
+                              hintText: "Subject",
                             ),
                             initialValue: "",
                             onSaved: (val) => helper.subject = val,
@@ -97,7 +97,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           leading: Icon(Icons.message),
                           title: TextFormField(
                             decoration: InputDecoration(
-                              hintText: "Mesaj",
+                              hintText: "Message",
                             ),
                             initialValue: "",
                             onSaved: (val) => helper.body = val,
@@ -110,7 +110,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         FlatButton(
                           padding: EdgeInsets.all(10.0),
                           child: Text(
-                            "Paylaş",
+                            "Send",
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                           shape: RoundedRectangleBorder(
