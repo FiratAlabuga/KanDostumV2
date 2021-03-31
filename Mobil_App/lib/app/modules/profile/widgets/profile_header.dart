@@ -68,7 +68,7 @@ class ProfileHeader extends StatelessWidget {
               children: <Widget>[
                 _buildDonationDate(
                   context,
-                  label: 'Son bağış',
+                  label: 'Last donation',
                   date: lastDate,
                 ),
                 Icon(
@@ -77,7 +77,7 @@ class ProfileHeader extends StatelessWidget {
                 ),
                 _buildDonationDate(
                   context,
-                  label: 'Sonraki bağış',
+                  label: 'Next donation',
                   date: nextDate,
                 ),
               ],
